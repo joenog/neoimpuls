@@ -3,5 +3,5 @@ export default function DesignWeb() {
     <>
       <h1>DesignWeb</h1>
     </>
-  );
+  )
 }

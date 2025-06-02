@@ -3,5 +3,5 @@ export default function Portfolio() {
     <>
       <h1>PORTFOLIO</h1>
     </>
-  );
+  )
 }
