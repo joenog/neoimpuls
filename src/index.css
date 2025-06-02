@@ -37,25 +37,23 @@ body {
   animation-name: circleToSquare;
   animation-duration: 8s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes circleToSquare {
   0% {
-    border-radius: 50%; /* Inicia como círculo */
+    border-radius: 50%;
     background-color: #d5d5d5;
-    transform: rotate(0deg); /* Opcional: adiciona rotação */
-    //background-color: #ffc107; /* Âmbar */
+    transform: rotate(0deg);
   }
   25% {
-    //-color: #f44336; /* Vermelho */
-    //border-top-left-radius: 1px;
-    background-color: #f0d463; /* Vermelho */
-    border-radius: 30%; /* Transiciona para quadrado */
+    background-color: #f0d463;
     border-bottom-left-radius: 1px;
-    transform: rotate(180deg); /* Opcional: continua a rotação */
+    border-radius: 30%;
+    transform: rotate(180deg);
   }
   100% {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50;
     border-radius: 50%;
     transform: rotate(360deg);
   }

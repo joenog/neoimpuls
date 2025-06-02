@@ -4,7 +4,11 @@ export default function Banner() {
       window.scrollTo({ top: 880, behavior: 'smooth' })
       return
     }
-    window.scrollTo({ top: 700, behavior: 'smooth' })
+    if (window.innerWidth <= 1000) {
+      window.scrollTo({ top: 1100, behavior: 'smooth'})
+      return
+    }
+    window.scrollTo({ top: 750, behavior: 'smooth' })
   }
 
   return (
@@ -13,10 +17,10 @@ export default function Banner() {
         Mude com o mundo.
       </h2>
       <div className="flex w-full items-center">
-        <div className="absolute right-0 md:right-0 p-110 top-0 md:-top-30  bg-blue-950"></div>
-        <div className="absolute right-45 -top-30 md:right-120 xl:right-220 bg-blue-950 p-110 circleToSquare"></div>
-        
-        <div className="absolute w-90 hidden xl:block right-30 p-6  text-zinc-900 ">
+        <div className="absolute h-screen right-0 p-110 bg-blue-950"></div>
+        <div className="absolute h-full right-48 md:right-190 -top-30 md:-top-140 bg-blue-950 p-110 md:p-160 circleToSquare"></div>
+
+        <div className="absolute w-90 hidden xl:block right-30 p-6 text-zinc-900">
           <p className="text-xl text-amber-50">
             Pare de perder vendas online por falta de tempo e conhecimento
             técnico! <br />
@@ -33,7 +37,7 @@ export default function Banner() {
         </div>
         <button
           onClick={scrollNext}
-          className="w-full h-180 cursor-pointer flex justify-center items-end ight-3/6 bottom-20 bg-transparent p-2 rounded-2xl"
+          className="w-full h-180 cursor-pointer flex justify-center items-end bottom-20 bg-transparent p-2 rounded-2xl"
         >
           <img src={'./arrow.png'} alt="" className="w-6 opacity-30" />
         </button>

@@ -7,12 +7,12 @@ export default function Home() {
       <Banner />
       <div className="w-full">
         <Container>
-          <section>
-            <h2 className="text-3xl text-center my-2 font-bold">
+          <section className='mx-2 mt-16 mb-30'>
+            <h2 className="text-3xl text-center mt-16 font-bold">
               Pare de perder tempo e Assuma o controle do seu negócio na era
               digital
             </h2>
-            <div className="flex gap-8">
+            <div className="flex gap-8 ">
               <div className="text-xl flex flex-col gap-6">
                 <p className="mt-14">
                   Te soa familiar ficar preso por horas tentando decifrar a
@@ -40,8 +40,8 @@ export default function Home() {
                   digitais para o seu negócio por apenas 60 dias.
                 </p>
               </div>
-              <div className="ml-20 w-500 hidden md:block">
-                <img className=" h-90 mt-30" src={'image-home.png'} alt="" />
+              <div className="ml-1 w-500 hidden md:block">
+                <img className="h-90 md:h-70 mt-30 md:ml-20 transition-transform duration-200 hover:scale-105" src={'image-home.png'} alt="" />
                 <h2 className="text-xl text-center text-zinc-900">
                   Seu negócio multiplataforma!
                 </h2>
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="py-20 shadow-2xl my-40 md:mt-20 p-5 rounded-3xl">
+          <section className=" shadow-2xl py-14 md:mt-20 p-5 rounded-3xl ">
             <h1 className="text-3xl font-bold mb-10 text-center">
               Benefícios de uma estratégia comercial
             </h1>
