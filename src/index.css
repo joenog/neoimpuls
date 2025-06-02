@@ -34,7 +34,9 @@ body {
 }
 
 .circleToSquare {
-  animation: circleToSquare 8s infinite;
+  animation-name: circleToSquare;
+  animation-duration: 8s; /* Defina a duração */
+  animation-iteration-count: infinite; /* Se quiser repetir */
 }
 
 @keyframes circleToSquare {
@@ -50,7 +52,7 @@ body {
     //background-color: #f44336; /* Vermelho */
     //border-top-left-radius: 1px;
     border-bottom-left-radius: 1px;
-    background-color: rgb(213, 213, 213);
+    background-color: #d5d5d5;
   }
   100% {
     border-radius: 50%;
