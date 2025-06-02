@@ -14,8 +14,8 @@ export default function Banner() {
       </h2>
       <div className="flex w-full items-center">
         <div className="absolute right-0 md:right-0 p-110 top-0 md:-top-30  bg-blue-950"></div>
-        <div className="absolute right-45 -top-30 md:right-120 xl:right-220  bg-blue-950 p-110 circleToSquare"></div>
-
+        <div className="absolute right-45 -top-30 md:right-120 xl:right-220 bg-blue-950 p-110 circleToSquare"></div>
+        
         <div className="absolute w-90 hidden xl:block right-30 p-6  text-zinc-900 ">
           <p className="text-xl text-amber-50">
             Pare de perder vendas online por falta de tempo e conhecimento
