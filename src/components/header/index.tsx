@@ -30,7 +30,7 @@ export default function Header() {
       <div className="w-7xl flex items-center justify-between mx-4">
         <div className="w-16 cursor-pointer">
           <Link to={'/'}>
-            <img src={'./public/neoimpuls.png'} alt="logo-neo-impuls" />
+            <img src={'./neoimpuls.png'} alt="logo-neo-impuls" />
           </Link>
         </div>
         <ul className="flex flex-row gap-4 cursor-pointer text-black font-bold">
