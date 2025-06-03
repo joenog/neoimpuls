@@ -7,7 +7,9 @@ export default function Footer() {
           <li className="hover:underline">Contact</li>
           <li className="hover:underline">More Info.</li>
         </ul>
-        <p className="mt-8">© NeoImpuls 2025 | Todos os direitos reservados.</p>
+        <p className="mt-8">
+          © NeoImpuls 2025 | Todos os direitos reservados.
+        </p>
         <a
           className="opacity-20"
           target="_blank"

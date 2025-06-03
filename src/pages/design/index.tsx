@@ -1,7 +1,9 @@
+import Container from '../../components/container'
+
 export default function DesignWeb() {
   return (
-    <>
-      <h1>DesignWeb</h1>
-    </>
+    <Container>
+      <h1>Design Web</h1>
+    </Container>
   )
 }

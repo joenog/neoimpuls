@@ -12,7 +12,7 @@ export default function Banner() {
   }
 
   return (
-    <div className="w-full flex items-center h-screen bg-white fadeIn">
+    <section className="w-full flex items-center h-screen bg-white fadeIn">
       <h2 className="text-6xl w-full md:w-4xl text-center absolute z-10 text-white font-extrabold">
         Mude com o mundo.
       </h2>
@@ -26,7 +26,7 @@ export default function Banner() {
             técnico! <br />
             Esta é a maneira mais fácil de atrair clientes, aumentar sua receita
             e expandir seus negócios online
-            <span className=" showHide">|</span>
+            <span className="showHide">|</span>
           </p>
           <button
             onClick={scrollNext}
@@ -42,6 +42,6 @@ export default function Banner() {
           <img src={'./arrow.png'} alt="" className="w-6 opacity-30" />
         </button>
       </div>
-    </div>
+    </section>
   )
 }
