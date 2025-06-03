@@ -21,7 +21,7 @@ body {
 }
 
 .showHide {
-  animation: showHide 0.8s infinite;
+  animation: showHide 0.7s infinite;
 }
 
 @keyframes fadeIn {

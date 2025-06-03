@@ -5,7 +5,7 @@ export default function Banner() {
       return
     }
     if (window.innerWidth <= 1000) {
-      window.scrollTo({ top: 1100, behavior: 'smooth'})
+      window.scrollTo({ top: 1100, behavior: 'smooth' })
       return
     }
     window.scrollTo({ top: 750, behavior: 'smooth' })
