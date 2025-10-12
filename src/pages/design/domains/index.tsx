@@ -3,5 +3,5 @@ export default function Domains() {
     <>
       <h1>DOMAINS</h1>
     </>
-  )
+  );
 }

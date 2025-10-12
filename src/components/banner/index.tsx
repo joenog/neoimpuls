@@ -1,14 +1,14 @@
 export default function Banner() {
   function scrollNext() {
     if (window.innerWidth <= 720) {
-      window.scrollTo({ top: 880, behavior: 'smooth' })
-      return
+      window.scrollTo({ top: 880, behavior: 'smooth' });
+      return;
     }
     if (window.innerWidth <= 1000) {
-      window.scrollTo({ top: 1100, behavior: 'smooth' })
-      return
+      window.scrollTo({ top: 1100, behavior: 'smooth' });
+      return;
     }
-    window.scrollTo({ top: 750, behavior: 'smooth' })
+    window.scrollTo({ top: 750, behavior: 'smooth' });
   }
 
   return (
@@ -17,7 +17,7 @@ export default function Banner() {
         Mude com o mundo.
       </h2>
       <div className="flex w-full items-center">
-        <div className="absolute h-screen right-0 p-110 bg-blue-950"></div>
+        <div className="absolute h-screen right-0 md:-top-30 p-110 bg-blue-950"></div>
         <div className="absolute h-full right-48 md:right-190 -top-30 md:-top-140 bg-blue-950 p-110 md:p-160 circleToSquare"></div>
 
         <div className="absolute w-90 hidden xl:block right-30 p-6 text-zinc-900">
@@ -43,5 +43,5 @@ export default function Banner() {
         </button>
       </div>
     </section>
-  )
+  );
 }

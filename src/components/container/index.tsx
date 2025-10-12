@@ -1,7 +1,7 @@
-import { type ReactNode } from 'react'
+import { type ReactNode } from 'react';
 
 interface ContainerProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export default function Container({ children }: ContainerProps) {
@@ -9,5 +9,5 @@ export default function Container({ children }: ContainerProps) {
     <section className="w-full max-w-7xl mx-auto px-4 pt-20 fadeIn">
       {children}
     </section>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Layout from '../components/layout'
-import Home from '../pages/home'
-import DesignWeb from '../pages/design'
-import Domains from '../pages/design/domains'
-import Portfolio from '../pages/design/portfolio'
-import Blog from '../pages/blog'
-import Contact from '../pages/contact/Index'
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from '../components/layout';
+import Home from '../pages/home';
+import DesignWeb from '../pages/design';
+import Domains from '../pages/design/domains';
+import Portfolio from '../pages/design/portfolio';
+import Blog from '../pages/blog';
+import Contact from '../pages/contact/Index';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +38,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-])
+]);
 
-export default router
+export default router;

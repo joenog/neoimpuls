@@ -1,29 +1,29 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 50
+      const scrollThreshold = 50;
 
       if (window.scrollY > scrollThreshold) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
-    window.addEventListener('scroll', handleScroll)
+    };
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const headerClassName = `w-full fixed z-50 top-0 flex justify-center h-17 transition-colors duration-300 ${
     isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
-  }`
+  }`;
 
   return (
     <header className={headerClassName}>
@@ -40,5 +40,5 @@ export default function Header() {
         </ul>
       </div>
     </header>
-  )
+  );
 }
