@@ -1,32 +1,19 @@
 import Banner from '../../components/banner';
 import Container from '../../components/container';
-import {
-  MdWeb,
-  MdOutlineDashboard,
-  MdBusinessCenter,
-  MdAutorenew,
-  MdCampaign,
-  MdCloudDone
-} from 'react-icons/md';
-import Footer from '../../components/footer';
+import { MdWeb, MdOutlineDashboard, MdBusinessCenter, MdAutorenew, MdCampaign, MdCloudDone } from 'react-icons/md';
 
 export default function Home() {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
-      {/* Seção Banner */}
-      <section className="snap-start h-screen flex items-center justify-center">
-        <Banner />
-      </section>
-
-      {/* Seção Introdução */}
-      <section className="snap-start h-screen flex items-center justify-center px-4">
+    <>
+      <Banner />
+      <div className="w-full">
         <Container>
-          <div className="mx-2 md:mt-16 mb-30">
+          <section className="mx-2 md:mt-16 mb-30">
             <h2 className="text-2xl text-center font-bold text-zinc-800">
-              Assuma o controle do seu negócio na era digital.
+              Chega de perder tempo. Assuma o controle do seu negócio na era digital.
             </h2>
-            <div className="flex gap-20 flex-col md:flex-row">
-              <div className="text-md flex flex-col gap-6 p-6 rounded-xl mt-12 md:mt-18">
+            <div className="flex gap-20">
+              <div className="text-xl flex flex-col gap-6 border-zinc-200 border p-6 rounded-2xl mt-12">
                 <p>
                   Já se pegou horas tentando entender tecnologia sozinho, ou confiando em “especialistas” que acabam bagunçando seu site — ou pior, sequestrando ele?
                 </p>
@@ -43,29 +30,24 @@ export default function Home() {
                   Mas você não quer isso, certo? Então chegou a hora de tomar uma decisão estratégica: construir uma máquina de vendas digitais em apenas 60 dias.
                 </p>
               </div>
-              <div className="w-200 hidden md:flex flex-col">
+              <div className="w-300 hidden md:block">
                 <img
-                  className="mt-30 transition-transform duration-200 hover:scale-105"
+                  className="h-90 md:h-70 mt-30 transition-transform duration-200 hover:scale-105"
                   src={'image-home.png'}
                   alt="img-app"
                 />
-                <h2 className="text-md text-center text-zinc-900">
+                <h2 className="text-xl text-center text-zinc-900">
                   Seu negócio multiplataforma!
                 </h2>
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
+          </section>
 
-      {/* Seção Soluções */}
-      <section className="snap-start h-screen flex items-center justify-center px-4">
-        <Container>
-          <div className="mx-2 md:mt-20 mb-20">
+          <section className="mx-2 md:mt-20 mb-20">
             <h2 className="text-2xl md:text-2xl text-center font-bold text-zinc-800 mb-8">
               Soluções que Transformam Resultados
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 text-base md:text-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-base md:text-lg">
               {[
                 {
                   icon: <MdOutlineDashboard size={32} className="text-red-500 mb-2" />,
@@ -108,72 +90,65 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </Container>
-      </section>
+          </section>
 
-      {/* Seção Benefícios */}
-      <section className="snap-start h-screen flex items-center justify-center px-4">
-        <Container>
-          <div className=" py-14 md:mt-20 p-5 rounded-3xl mb-30">
+          <section className="shadow-2xl py-14 md:mt-20 p-5 rounded-3xl mb-30">
             <h1 className="text-2xl font-bold mb-10 text-center">
-              Estratégia comercial
+              Benefícios de uma estratégia comercial
             </h1>
-            <div className="md:flex gap-6 text-md">
-              {[
-                {
-                  title: 'Atraia Prospectos Qualificados',
-                  desc: 'Atraia os clientes CERTOS para o seu negócio e pare de perder tempo com curiosos indecisos. Você vai aprender as estratégias exatas para encontrá-los online e transformá-los em compradores fiéis.'
-                },
-                {
-                  title: 'Crie um Sistema Passo a Passo',
-                  desc: 'Crie um sistema de vendas online que guia seus visitantes até a compra — passo a passo. Esqueça a correria atrás de clientes e veja suas vendas crescerem de forma previsível.'
-                },
-                {
-                  title: 'Otimize seu tempo com ferramentas',
-                  desc: 'Ganhe tempo automatizando tarefas repetitivas. Vamos te mostrar como configurar ferramentas simples para que seu negócio continue vendendo — mesmo quando você estiver descansando ou focado em outras prioridades.'
-                }
-              ].map((item, index) => (
-                <div key={index}>
-                  <h2 className="block my-4 font-bold text-center">{item.title}</h2>
-                  <p className="p-4 border-1 rounded-2xl border-zinc-200">{item.desc}</p>
-                </div>
-              ))}
+            <div className="md:flex gap-6 text-xl">
+              <div>
+                <h2 className="block my-4 font-bold text-center">
+                  Atraia Prospectos Qualificados
+                </h2>
+                <p className="p-4 border-1 rounded-2xl border-zinc-200">
+                  Atraia os clientes CERTOS para o seu negócio e pare de perder tempo com curiosos indecisos. Você vai aprender as estratégias exatas para encontrá-los online e transformá-los em compradores fiéis.
+                </p>
+              </div>
+              <div>
+                <h2 className="block my-4 font-bold text-center">
+                  Crie um Sistema Passo a Passo
+                </h2>
+                <p className="p-4 border-1 rounded-2xl border-zinc-200">
+                  Crie um sistema de vendas online que guia seus visitantes até a compra — passo a passo. Esqueça a correria atrás de clientes e veja suas vendas crescerem de forma previsível.
+                </p>
+              </div>
+              <div>
+                <h2 className="block my-4 font-bold text-center">
+                  Otimize seu tempo com ferramentas
+                </h2>
+                <p className="p-4 border-1 rounded-2xl border-zinc-200">
+                  Ganhe tempo automatizando tarefas repetitivas. Vamos te mostrar como configurar ferramentas simples para que seu negócio continue vendendo — mesmo quando você estiver descansando ou focado em outras prioridades.
+                </p>
+              </div>
             </div>
-          </div>
-        </Container>
-      </section>
+          </section>
 
-      {/* Seção Estratégia Comercial */}
-      <section className="snap-start h-screen flex items-center justify-center px-4">
-        <Container>
-          <div className="mx-2 md:mt-16 mb-32 lg:mb-40">
+          <section className="mx-2 md:mt-16 mb-32 lg:mb-40">
             <h2 className="text-2xl text-center font-bold text-zinc-800 px-4 md:px-0">
-              Nós temos a chave para o crescimento de Negócios
+              As Estratégias Comerciais são a Chave para o Crescimento Sustentável de um Negócio como o seu…
             </h2>
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-between md:gap-10 lg:gap-20 mt-8 md:mt-12 p-4 md:p-0">
-              <div className="text-md max-w-full md:max-w-md lg:max-w-lg border-zinc-200 border p-6 rounded-xl">
+              <div className="text-xl max-w-full md:max-w-md lg:max-w-lg border-zinc-200 border p-6 rounded-2xl bg-white shadow-lg">
                 <p>
                   Uma estratégia comercial bem definida é como um motor potente que impulsiona seu negócio. Ela atrai clientes, aumenta vendas e constrói uma base fiel — tudo isso enquanto você foca no que realmente importa: crescer.
                 </p>
               </div>
+
               <div className="w-full md:w-1/2 lg:w-1/3 mt-8 md:mt-0 hidden md:block flex-shrink-0">
                 <img
-                  className="w-full h-auto max-h-86 md:max-h-80 object-cover"
+                  className="w-full h-auto max-h-96 md:max-h-72 object-cover rounded-lg transition-transform duration-200 hover:scale-105"
                   src={'./image-home2.png'}
                   alt="img-app"
                 />
-                <h2 className="text-md text-center text-zinc-900 mt-4">
+                <h2 className="text-xl text-center text-zinc-900 mt-4">
                   Alcance novos resultados!
                 </h2>
               </div>
             </div>
-          </div>
+          </section>
         </Container>
-      </section>
-      <section className="snap-start h-screen flex items-center justify-center px-4 bg-[#162556]">
-        <Footer />
-      </section>
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,47 +1,72 @@
 export default function Banner() {
   function scrollNext() {
-    if (window.innerWidth <= 720) {
-      window.scrollTo({ top: 880, behavior: 'smooth' });
-      return;
+    const sections = document.querySelectorAll('section.snap-start');
+    const currentScroll = window.scrollY;
+    let nextSection: Element | null = null;
+
+    for (let i = 0; i < sections.length; i++) {
+      const top = (sections[i] as HTMLElement).offsetTop;
+      if (top > currentScroll + 10) {
+        nextSection = sections[i];
+        break;
+      }
     }
-    if (window.innerWidth <= 1000) {
-      window.scrollTo({ top: 1100, behavior: 'smooth' });
-      return;
+
+    if (nextSection) {
+      (nextSection as HTMLElement).scrollIntoView({ behavior: 'smooth' });
     }
-    window.scrollTo({ top: 750, behavior: 'smooth' });
   }
 
   return (
-    <section className="w-full flex items-center h-screen bg-white fadeIn">
-      <h2 className="text-6xl w-full md:w-4xl text-center absolute z-10 text-white font-extrabold">
-        Mude com o mundo.
-      </h2>
-      <div className="flex w-full items-center">
-        <div className="absolute h-screen right-0 md:-top-30 p-110 bg-blue-950"></div>
-        <div className="absolute h-full right-48 md:right-190 -top-30 md:-top-140 bg-blue-950 p-110 md:p-160 circleToSquare"></div>
+    <section className="snap-start min-h-screen w-full relative bg-black/5 flex items-center justify-center bg-beige-50 text-white overflow-hidden">
+      {/* Conteúdo central */}
+      <div className="z-20 relative inset-0 flex flex-col items-center justify-center px-6 text-center">
+        
+        <div className="absolute h-full right-48 md:right-130 -top-110 md:-top-140 bg-blue-950 p-110 md:p-160 circleToSquare"></div>
 
-        <div className="absolute w-90 hidden xl:block right-30 p-6 text-zinc-900">
-          <p className="text-xl text-amber-50">
-            Pare de perder vendas online por falta de tempo e conhecimento
-            técnico! <br />
-            Esta é a maneira mais fácil de atrair clientes, aumentar sua receita
-            e expandir seus negócios online
-            <span className="showHide">|</span>
-          </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-950 mb-4 z-10">
+          Mude com o mundo.
+        </h2>
+
+        <p className="text-sm sm:text-base md:text-lg text-blue-950/80 max-w-xl leading-relaxed mb-6 z-10">
+          Pare de perder vendas online por falta de tempo e conhecimento técnico.
+          Esta é a maneira mais fácil de atrair clientes, aumentar sua receita e expandir seus negócios online.
+        </p>
+
+        <div className="flex gap-3">
           <button
             onClick={scrollNext}
-            className="text-2xl my-5 cursor-pointer bg-white hover:rounded-2xl hover:shadow-xl p-3 px-6 hover:bg-amber-50 transition-all"
+            className="bg-blue-950 text-white px-5 py-2 rounded-lg text-sm sm:text-base font-semibold shadow-md hover:scale-[1.02] transition-transform z-10"
+            aria-label="Ir para a próxima seção"
           >
-            Impucionar
+            Impulsionar
           </button>
         </div>
-        <button
-          onClick={scrollNext}
-          className="w-full h-180 cursor-pointer flex justify-center items-end bottom-20 bg-transparent p-2 rounded-2xl"
-        >
-          <img src={'./arrow.png'} alt="" className="w-6 opacity-30" />
-        </button>
       </div>
+
+      {/* Seta rolável inferior */}
+      <button
+        onClick={scrollNext}
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 p-2"
+        aria-label="Rolar para baixo"
+      >
+        <img src={'/arrow.png'} alt="Scroll down" className="w-6 h-6 opacity-60" />
+      </button>
+
+      {/* Decoração: formas fixas de fundo (círculo girando à direita) */}
+      <div
+        aria-hidden
+        className="absolute -right-20 top-3.5 -translate-y-1/2 z-10 pointer-events-none"
+      >
+        {/* Círculo principal giratório */}
+        <div className="circleToSquareMoon rounded-full bg-blue-900/90 dark:bg-blue-800/10 w-[360px] h-[360px] md:w-[500px] md:h-[500px] lg:w-[340px] lg:h-[340px]"></div>
+      </div>
+
+      {/* Forma escura lateral (ajusta contraste no mobile) */}
+      <div
+        aria-hidden
+        className="absolute right-0 top-0 h-full w-[20vw] min-w-[120px] max-w-[320px] bg-blue-900/5 z-0"
+      />
     </section>
   );
 }

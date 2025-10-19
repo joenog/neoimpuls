@@ -7,37 +7,34 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 50;
-
-      if (window.scrollY > scrollThreshold) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > scrollThreshold);
     };
+
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const headerClassName = `w-full fixed z-50 top-0 flex justify-center h-17 transition-colors duration-300 ${
-    isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
-  }`;
+  const headerClassName = `
+    w-full fixed top-0 z-50 flex justify-center items-center h-16 px-4
+    transition-all duration-300 ease-in-out
+    ${isScrolled ? 'bg-white shadow-md text-black' : 'bg-transparent text-white'}
+  `;
 
   return (
     <header className={headerClassName}>
-      <div className="w-7xl flex items-center justify-between mx-4">
+      <div className="w-full max-w-7xl flex items-center justify-between">
         <div className="w-16 cursor-pointer">
-          <Link to={'/'}>
-            <img src={'./neoimpuls.png'} alt="logo-neo-impuls" />
+          <Link to="/">
+            <img src="./neoimpuls.png" alt="logo-neo-impuls" />
           </Link>
         </div>
-        <ul className="flex flex-row gap-4 cursor-pointer text-black font-bold">
-          <Link to={'/designweb'}> Design </Link>
-          <Link to={'/blog'}> Blog </Link>
-          <Link to={'/contact'}> Contact </Link>
-        </ul>
+        <nav>
+          <ul className="flex gap-6 font-semibold">
+            <li><Link to="/designweb">Design</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
       </div>
     </header>
   );
