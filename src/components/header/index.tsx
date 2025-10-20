@@ -1,5 +1,8 @@
+// eslint-disable-next-line react-refresh/only-export-components
+export const topo = document.getElementById("topo");
+
 export default function Header() {
-  const checkoutUrl = "_black";
+  const checkoutUrl = "_blanck";
 
   return (
     <header className="fixed top-2 left-0 w-full z-50">
@@ -11,7 +14,7 @@ export default function Header() {
               aria-label="Home - Neo"
               className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-amber-900 rounded cursor-pointer"
             >
-              <img src={'/neoimpuls.png'} alt="Logo Alexandria" className="h-18 w-auto" />
+              <img src={'/neoimpuls.png'} alt="Logo Neo Impuls" className="h-18 w-auto" />
               <div className="hidden sm:flex flex-col leading-tight">
                 <span className="text-sm font-semibold text-blue-950">Neo Impuls</span>
                 <span className="text-xs text-gray-300">Seu negócio no topo</span>
