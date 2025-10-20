@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="flex flex-row items-center justify-center mt-20 py-20 bg-[#162556] text-white px-10">
-      <div className="w-6xl text-sm">
+      <div className="w-auto md:w-2xl xl:w-5xl text-sm">
         <ul className="cursor-pointer w-30">
           <li className="hover:underline">About</li>
           <li className="hover:underline">Contact</li>

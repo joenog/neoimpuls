@@ -50,7 +50,7 @@ export default function Banner() {
         className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 p-2"
         aria-label="Rolar para baixo"
       >
-        <img src={'/arrow.png'} alt="Scroll down" className="w-6 h-6 opacity-60" />
+        <img src={'/arrow.png'} alt="Scroll down" className="w-6 h-4 opacity-40" />
       </button>
 
       {/* Decoração: formas fixas de fundo (círculo girando à direita) */}
@@ -59,7 +59,7 @@ export default function Banner() {
         className="absolute -right-20 top-3.5 -translate-y-1/2 z-10 pointer-events-none"
       >
         {/* Círculo principal giratório */}
-        <div className="circleToSquareMoon rounded-full bg-blue-900/90 dark:bg-blue-800/10 w-[360px] h-[360px] md:w-[500px] md:h-[500px] lg:w-[340px] lg:h-[340px]"></div>
+      <div className="circleToSquareMoon rounded-full bg-blue-900/90 dark:bg-blue-800/10 w-[360px] h-[360px] md:w-[500px] md:h-[500px] lg:w-[340px] lg:h-[340px]"></div>
       </div>
 
       {/* Forma escura lateral (ajusta contraste no mobile) */}
